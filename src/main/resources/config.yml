@@ -1,0 +1,37 @@
+plugin-settings:
+  prefix: "&e&lAracde &8|"
+  no-permission: "&cNo permissions."
+blockbreaker-config:
+  game-prefix: "&c&lBlock Breaker"
+  required-players: 2
+  countdown-seconds: 60
+  gametime-length: 120
+  countdown-messages:
+    waiting-message: "&cWaiting for %players_needed% players to start the game"
+    countdown-10-seconds: "&aGame will start in &210&a seconds"
+    countdown-5-seconds: "&aGame will start in &25&a seconds"
+    countdown-3-seconds: "&aGame will start in &23&a seconds"
+    countdown-2-seconds: "&aGame will start in &22&a seconds"
+    countdown-1-seconds: "&aGame will start in &21&a second"
+  lobby-spawn:
+    world:
+    x:
+    y:
+    z:
+    pitch:
+    yaw:
+  arenas:
+  0:
+     world:
+     x:
+     y:
+     z:
+     pitch:
+     yaw:
+   1:
+    world:
+    x:
+    y:
+    z:
+    pitch:
+    yaw:

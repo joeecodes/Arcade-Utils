@@ -1,0 +1,9 @@
+name: ArcadeUtils
+version: ${project.version}
+main: me.buryings.arcadeutils.ArcadeUtils
+description: Arcade server utilities
+commands:
+  arcade:
+    description: Base command and lists plugin version
+  menu:
+    description: Opens main arcade menu
