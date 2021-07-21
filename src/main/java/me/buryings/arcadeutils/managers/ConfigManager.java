@@ -3,7 +3,10 @@ package me.buryings.arcadeutils.managers;
 import jdk.nashorn.internal.runtime.regexp.joni.Config;
 import me.buryings.arcadeutils.ArcadeUtils;
 import org.bukkit.Bukkit;
+import org.bukkit.command.Command;
+import org.bukkit.command.CommandSender;
 import org.bukkit.configuration.file.YamlConfiguration;
+import org.bukkit.entity.Player;
 
 import java.io.File;
 import java.io.IOException;
@@ -21,6 +24,7 @@ public class ConfigManager {
         main.saveDefaultConfig();
     }
 }
+
 /*
         // BLOCK BREAKER MINIGAME CONFIGURATION
         public YamlConfiguration getBlockBreaker () {

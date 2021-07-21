@@ -1,6 +1,7 @@
 plugin-settings:
-  prefix: "&e&lAracde &8|"
-  no-permission: "&cNo permissions."
+  prefix: "&e&lAracde &8| "
+  no-permission: "&cNo permission."
+  config-reloaded: "%prefix% &aSuccessfully reloaded the configuration file"
 blockbreaker-config:
   game-prefix: "&c&lBlock Breaker"
   required-players: 2

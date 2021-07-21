@@ -32,6 +32,8 @@ public final class ArcadeUtils extends JavaPlugin {
 
         registerCommands();
         registerListeners();
+        new CommandManager().register();
+
         Bukkit.getServer().getConsoleSender().sendMessage("Arcade has started!");
 
     }
@@ -80,6 +82,9 @@ public final class ArcadeUtils extends JavaPlugin {
         blockbreakerLore.add(ChatColor.translateAlternateColorCodes('&', "&7Mine as many blocks as you  within"));
         blockbreakerLore.add(ChatColor.translateAlternateColorCodes('&', "&7the set time limit of 2 minutes in order to win."));
         blockbreakerLore.add(ChatColor.translateAlternateColorCodes('&', ""));
+
+        blockbreakermeta.setLore(blockbreakerLore);
+        blockbreaker.setItemMeta(blockbreakermeta);
 
         menu.setItem(0, item1);
         menu.setItem(1, blockbreaker);

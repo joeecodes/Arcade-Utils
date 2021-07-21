@@ -5,5 +5,7 @@ description: Arcade server utilities
 commands:
   arcade:
     description: Base command and lists plugin version
+  arcadereload:
+    description: Reloads config file
   menu:
     description: Opens main arcade menu

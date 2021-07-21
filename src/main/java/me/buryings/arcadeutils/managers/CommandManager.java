@@ -1,6 +1,7 @@
 package me.buryings.arcadeutils.managers;
 
 import me.buryings.arcadeutils.commands.CommandArcade;
+import me.buryings.arcadeutils.commands.config.CommandReloadConfig;
 
 public class CommandManager {
 
@@ -8,5 +9,6 @@ public class CommandManager {
     public void register() {
 
         new CommandArcade();
+        new CommandReloadConfig();
     }
 }
