@@ -6,6 +6,7 @@ import me.buryings.arcadeutils.commands.config.CommandReloadConfig;
 public class CommandManager {
 
     // register and manage commands
+    // DOESNT REALLY WORK BUT WILL GET TO IT SOON
     public void register() {
 
         new CommandArcade();

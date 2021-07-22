@@ -20,6 +20,7 @@ public class ConfigManager {
     public void ConfigManager(ArcadeUtils main) {
 
         // MAIN FILE CONFIGURATION
+        // DOESNT REALLY WORK BUT WILL GET TO IT SOON
         main.getConfig().options().copyDefaults();
         main.saveDefaultConfig();
     }
