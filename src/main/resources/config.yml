@@ -4,16 +4,22 @@ plugin-settings:
   config-reloaded: "%prefix% &aSuccessfully reloaded the configuration file"
 blockbreaker-config:
   game-prefix: "&c&lBlock Breaker"
+  winning-player-message: "&e%player% &6WINS!"
   required-players: 2
   countdown-seconds: 60
   gametime-length: 120
   countdown-messages:
     waiting-message: "&cWaiting for %players_needed% players to start the game"
-    countdown-10-seconds: "&aGame will start in &210&a seconds"
-    countdown-5-seconds: "&aGame will start in &25&a seconds"
-    countdown-3-seconds: "&aGame will start in &23&a seconds"
-    countdown-2-seconds: "&aGame will start in &22&a seconds"
-    countdown-1-seconds: "&aGame will start in &21&a second"
+    not-enough-players: "&7There are not enough players to start"
+    countdown-1-seconds: "&aGame will start in &21&a seconds"
+    game-start-message:
+      - "&7"
+      - "&7Welcome to &c&lBlockBreaker"
+      - ""
+      - "&7Your objective is to break as many blocks"
+      - "&7as you can before the time limit"
+      - ""
+      - "&7The player with the most broken blocks wins."
   lobby-spawn:
     world:
     x:
@@ -22,17 +28,17 @@ blockbreaker-config:
     pitch:
     yaw:
   arenas:
-  0:
-     world:
-     x:
-     y:
-     z:
-     pitch:
-     yaw:
-   1:
-    world:
-    x:
-    y:
-    z:
-    pitch:
-    yaw:
+    0:
+      world:
+      x:
+      y:
+      z:
+      pitch:
+      yaw:
+    1:
+      world:
+      x:
+      y:
+      z:
+      pitch:
+      yaw:

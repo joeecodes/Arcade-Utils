@@ -1,5 +1,7 @@
 package me.buryings.arcadeutils;
 
+import me.buryings.arcadeutils.commands.CommandArcade;
+import me.buryings.arcadeutils.commands.config.CommandReloadConfig;
 import me.buryings.arcadeutils.managers.CommandManager;
 import me.buryings.arcadeutils.managers.ConfigManager;
 import org.bukkit.*;
@@ -34,16 +36,25 @@ public final class ArcadeUtils extends JavaPlugin {
         registerListeners();
         new CommandManager().register();
 
+        // Using as config manager not working currently
+        this.getConfig().options().copyDefaults();
+        this.saveDefaultConfig();
+
         Bukkit.getServer().getConsoleSender().sendMessage("Arcade has started!");
 
     }
 
     @Override
     public void onDisable() {
+
         Bukkit.getServer().getConsoleSender().sendMessage("Arcade has stopped!");
     }
+
     public void registerCommands() {
-        new CommandManager().register();
+
+        getCommand("arcade").setExecutor(new CommandArcade());
+        getCommand("menu").setExecutor(this);
+        getCommand("arcadereload").setExecutor(this);
     }
     public void registerListeners() {
         // new ListenerManager().register();
@@ -101,6 +112,23 @@ public final class ArcadeUtils extends JavaPlugin {
             if (command.getName().equalsIgnoreCase("menu")) {
                 createMenu(p);
             }
+        }
+
+        // CONFIG RELOAD
+        if (p.hasPermission("arcadeutils.reload")) {
+            if (command.getName().equalsIgnoreCase("arcadereload")) {
+                this.reloadConfig();
+                p.sendMessage(ChatColor.translateAlternateColorCodes('&', this.getConfig().getString("plugin-settings.plugin-prefix"))
+                        + ChatColor.translateAlternateColorCodes('&', this.getConfig().getString("plugin-settings.config-reloaded")
+                        .replace("%prefix%", this.getConfig().getString("plugin-settings.plugin-prefix"))));
+            } else {
+                if (!(p.hasPermission("arcadeutils.reload"))) {
+                    p.sendMessage(ChatColor.translateAlternateColorCodes('&', this.getConfig().getString("plugin-settings.plugin-prefix"))
+                            + ChatColor.translateAlternateColorCodes('&', this.getConfig().getString("plugin-settings.no-permission")));
+                }
+            }
+
+            return false;
         }
         return false;
     }
