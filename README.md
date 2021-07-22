@@ -1,7 +1,7 @@
-# Arcade-Utils [Unfinished]
+# Arcade-Utils [Work in progress]
 An arcade/minigame core
 
 This minigame/arcade core is a configurable and simple game plugin designed for small servers.
 
 # Version / Recent Update
-The plugin is undergoing updates - (v1.1.3)
+The plugin is undergoing updates - (v1.1.5)
