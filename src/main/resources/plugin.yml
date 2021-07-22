@@ -11,3 +11,5 @@ commands:
     description: Opens main arcade menu
   forcestart:
     description: Force start a game of BlockBreaker
+  arena:
+    description: BlockBreaker arena command

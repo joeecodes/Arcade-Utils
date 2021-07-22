@@ -5,6 +5,8 @@ plugin-settings:
 blockbreaker-config:
   game-prefix: "&c&lBlock Breaker"
   winning-player-message: "&e%player% &6WINS!"
+  playing-arena: "&aYou're now playing in arena:"
+  not-in-arena: "&cYou are not in an arena"
   required-players: 2
   countdown-seconds: 60
   gametime-length: 120
@@ -23,21 +25,21 @@ blockbreaker-config:
       - ""
       - "&7The player with the most broken blocks wins."
   lobby-spawn:
-    world:
-    x:
-    y:
-    z:
-    pitch:
-    yaw:
+    world: 'world'
+    x: 10
+    y: 100
+    z: 10
+    pitch: 0
+    yaw: 0
   arenas:
-    0:
-      world:
-      x:
-      y:
-      z:
-      pitch:
-      yaw:
-    1:
+    '0':
+      world: 'world'
+      x: 10
+      y: 100
+      z: 10
+      pitch: 0
+      yaw: 0
+    '1':
       world:
       x:
       y:

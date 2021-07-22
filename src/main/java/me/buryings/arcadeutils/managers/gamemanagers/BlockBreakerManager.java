@@ -1,5 +1,6 @@
 package me.buryings.arcadeutils.managers.gamemanagers;
 
+import me.buryings.arcadeutils.managers.gamemanagers.enums.BlockBreakerGameState;
 import org.bukkit.entity.Player;
 
 import java.util.ArrayList;
@@ -21,7 +22,7 @@ public class BlockBreakerManager {
         return arenas;
     }
 
-    public boolean isPlaying(Player player) {
+    public static boolean isPlaying(Player player) {
         for (BlockBreakerArenas arena : arenas) {
             if (arena.getPlayers().contains(player.getUniqueId())) {
 
@@ -31,7 +32,7 @@ public class BlockBreakerManager {
         return false;
     }
 
-    public BlockBreakerArenas getArena(Player player) {
+    public static BlockBreakerArenas getArena(Player player) {
         for (BlockBreakerArenas arena : arenas) {
             if (arena.getPlayers().contains(player.getUniqueId())) {
                 return arena;
@@ -39,7 +40,7 @@ public class BlockBreakerManager {
         }
         return null;
     }
-    public BlockBreakerArenas getArena(int id) {
+    public static BlockBreakerArenas getArenaId(int id) {
         for (BlockBreakerArenas arena : arenas) {
             if (arena.getID() == id) {
                 return arena;
@@ -47,4 +48,8 @@ public class BlockBreakerManager {
         }
         return null;
     }
-}
+
+    public static boolean isRecruiting(int id) {
+        return getArenaId(id).getState() == BlockBreakerGameState.WAITING; }
+
+        }

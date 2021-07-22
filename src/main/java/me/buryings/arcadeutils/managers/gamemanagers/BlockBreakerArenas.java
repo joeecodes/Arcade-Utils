@@ -46,7 +46,7 @@ public class BlockBreakerArenas {
 
     public void reset() throws IOException {
         for (UUID uuid : players) {
-            removePlayer(Bukkit.getPlayer(uuid));
+            Bukkit.getPlayer(uuid).teleport(BlockBreakerConfig.getLobbySpawn());
         }
 
         state = BlockBreakerGameState.WAITING;
@@ -86,5 +86,8 @@ public class BlockBreakerArenas {
     }
     public void setState(BlockBreakerGameState countdown) {
         this.state = state;
+    }
+    public BlockBreaker BlockBreaker() {
+        return game;
     }
 }

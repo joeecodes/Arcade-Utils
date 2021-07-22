@@ -1,10 +1,13 @@
 package me.buryings.arcadeutils;
 
 import me.buryings.arcadeutils.commands.CommandArcade;
+import me.buryings.arcadeutils.commands.blockbreaker.CommandArena;
 import me.buryings.arcadeutils.commands.blockbreaker.CommandForceStart;
 import me.buryings.arcadeutils.commands.config.CommandReloadConfig;
 import me.buryings.arcadeutils.managers.CommandManager;
 import me.buryings.arcadeutils.managers.ConfigManager;
+import me.buryings.arcadeutils.managers.gamemanagers.BlockBreakerConfig;
+import me.buryings.arcadeutils.managers.gamemanagers.BlockBreakerManager;
 import me.buryings.arcadeutils.managers.gamemanagers.games.BlockBreakerCountdown;
 import org.bukkit.*;
 import org.bukkit.command.Command;
@@ -30,6 +33,10 @@ public final class ArcadeUtils extends JavaPlugin {
 
         // config file load
         new ConfigManager();
+        new BlockBreakerConfig(this);
+
+        // Game Managers
+        new BlockBreakerManager();
 
         // Instance
         ArcadeUtils.instance = this;
@@ -61,6 +68,7 @@ public final class ArcadeUtils extends JavaPlugin {
 
         // BlockBreaker commands
         getCommand("forcestart").setExecutor(new CommandForceStart());
+        getCommand("arena").setExecutor(new CommandArena());
     }
     public void registerListeners() {
         // new ListenerManager().register();
