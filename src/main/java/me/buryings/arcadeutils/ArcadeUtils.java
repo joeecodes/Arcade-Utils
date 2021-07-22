@@ -1,9 +1,11 @@
 package me.buryings.arcadeutils;
 
 import me.buryings.arcadeutils.commands.CommandArcade;
+import me.buryings.arcadeutils.commands.blockbreaker.CommandForceStart;
 import me.buryings.arcadeutils.commands.config.CommandReloadConfig;
 import me.buryings.arcadeutils.managers.CommandManager;
 import me.buryings.arcadeutils.managers.ConfigManager;
+import me.buryings.arcadeutils.managers.gamemanagers.games.BlockBreakerCountdown;
 import org.bukkit.*;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
@@ -52,9 +54,13 @@ public final class ArcadeUtils extends JavaPlugin {
 
     public void registerCommands() {
 
+        // Plugin base commands
         getCommand("arcade").setExecutor(new CommandArcade());
         getCommand("menu").setExecutor(this);
-        getCommand("arcadereload").setExecutor(this);
+        getCommand("arcadereload").setExecutor(new CommandReloadConfig(this));
+
+        // BlockBreaker commands
+        getCommand("forcestart").setExecutor(new CommandForceStart());
     }
     public void registerListeners() {
         // new ListenerManager().register();

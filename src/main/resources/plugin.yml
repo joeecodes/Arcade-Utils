@@ -9,3 +9,5 @@ commands:
     description: Reloads config file
   menu:
     description: Opens main arcade menu
+  forcestart:
+    description: Force start a game of BlockBreaker

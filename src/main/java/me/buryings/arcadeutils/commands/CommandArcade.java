@@ -16,7 +16,7 @@ public class CommandArcade implements CommandExecutor {
         // command: /arcade - listing version of plugin and creator(s)
         if (p.hasPermission("arcadeutils.arcade")) {
             if (command.getName().equalsIgnoreCase("arcade"))
-            p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&e&lARCADE &8> &7Version 1.1.0 &8- &fCreated by Buryings"));
+            p.sendMessage(ChatColor.translateAlternateColorCodes('&', "&e&lARCADE &8> &7Version 1.1.4 &8- &fCreated by Buryings"));
         }
 
         return false;

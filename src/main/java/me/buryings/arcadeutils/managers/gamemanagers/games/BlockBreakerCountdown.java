@@ -6,11 +6,12 @@ import me.buryings.arcadeutils.managers.gamemanagers.BlockBreakerArenas;
 import me.buryings.arcadeutils.managers.gamemanagers.BlockBreakerConfig;
 import me.buryings.arcadeutils.managers.gamemanagers.enums.BlockBreakerGameState;
 import org.bukkit.ChatColor;
+import org.bukkit.event.Listener;
 import org.bukkit.scheduler.BukkitRunnable;
 
 import java.io.IOException;
 
-public class BlockBreakerCountdown extends BukkitRunnable {
+public class BlockBreakerCountdown extends BukkitRunnable implements Listener {
 
     private BlockBreakerArenas arena;
     private ArcadeUtils main;

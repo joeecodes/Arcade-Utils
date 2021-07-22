@@ -1,5 +1,5 @@
 plugin-settings:
-  prefix: "&e&lAracde &8| "
+  plugin-prefix: "&e&lArcade &8| "
   no-permission: "&cNo permission."
   config-reloaded: "%prefix% &aSuccessfully reloaded the configuration file"
 blockbreaker-config:
@@ -8,6 +8,8 @@ blockbreaker-config:
   required-players: 2
   countdown-seconds: 60
   gametime-length: 120
+  game-forcestart-messages:
+    force-start: "%prefix% &aForce started a game of BlockBreaker"
   countdown-messages:
     waiting-message: "&cWaiting for %players_needed% players to start the game"
     not-enough-players: "&7There are not enough players to start"
