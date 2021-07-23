@@ -3,13 +3,3 @@ version: ${project.version}
 main: me.buryings.arcadeutils.ArcadeUtils
 description: Arcade server utilities
 commands:
-  arcade:
-    description: Base command and lists plugin version
-  arcadereload:
-    description: Reloads config file
-  menu:
-    description: Opens main arcade menu
-  forcestart:
-    description: Force start a game of BlockBreaker
-  arena:
-    description: BlockBreaker arena command

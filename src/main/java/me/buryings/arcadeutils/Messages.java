@@ -1,9 +1,11 @@
 package me.buryings.arcadeutils;
 
-import me.buryings.arcadeutils.managers.gamemanagers.BlockBreakerConfig;
+import club.deltapvp.deltacore.api.utilities.Message;
+import lombok.experimental.UtilityClass;
 import org.bukkit.ChatColor;
 
-public class Messages {
+@UtilityClass
+public class Messages  {
 
     private static ArcadeUtils main;
 
@@ -11,19 +13,29 @@ public class Messages {
         Messages.main = main;
 
         // MAIN PLUGIN CONFIG SETTINGS
-        String PLUGIN_PREFIX = main.getConfig().getString(ChatColor.translateAlternateColorCodes('&', "plugin-settings.prefix"));
-        String NO_PERMISSION = main.getConfig().getString(ChatColor.translateAlternateColorCodes('&', "plugin-settings.no-permission"));
+        PLUGIN_PREFIX = new Message(main.getConfig().getString("plugin-settings.prefix"));
+        NO_PERMISSION = new Message(main.getConfig().getString(ChatColor.translateAlternateColorCodes('&', "plugin-settings.no-permission")));
         // BLOCKBREAKER CONFIG SETTINGS
-        String BB_PREFIX = main.getConfig().getString(ChatColor.translateAlternateColorCodes('&', "blockbreaker-config.game-prefix"));
-        String BB_COUNTDOWN_WAITING = main.getConfig().getString(ChatColor.translateAlternateColorCodes('&', "blockbreaker-config.countdown-messages.waiting-message"));
-        String BB_COUNTDOWN_10_SECONDS = main.getConfig().getString(ChatColor.translateAlternateColorCodes('&', "blockbreaker-config.countdown-messages.countdown-10-seconds"));
-        String BB_COUNTDOWN_5_SECONDS = main.getConfig().getString(ChatColor.translateAlternateColorCodes('&', "blockbreaker-config.countdown-messages.countdown-5-seconds"));
-        String BB_COUNTDOWN_3_SECONDS = main.getConfig().getString(ChatColor.translateAlternateColorCodes('&', "blockbreaker-config.countdown-messages.countdown-3-seconds"));
-        String BB_COUNTDOWN_2_SECONDS = main.getConfig().getString(ChatColor.translateAlternateColorCodes('&', "blockbreaker-config.countdown-messages.countdown-2-seconds"));
-        String BB_COUNTDOWN_1_SECONDS = main.getConfig().getString(ChatColor.translateAlternateColorCodes('&', "blockbreaker-config.countdown-messages.countdown-1-second"));
+        BB_PREFIX = new Message(main.getConfig().getString(ChatColor.translateAlternateColorCodes('&', "blockbreaker-config.game-prefix")));
+        BB_COUNTDOWN_WAITING = new Message(main.getConfig().getString(ChatColor.translateAlternateColorCodes('&', "blockbreaker-config.countdown-messages.waiting-message")));
+        BB_COUNTDOWN_10_SECONDS = new Message(main.getConfig().getString(ChatColor.translateAlternateColorCodes('&', "blockbreaker-config.countdown-messages.countdown-10-seconds")));
+        BB_COUNTDOWN_5_SECONDS = new Message(main.getConfig().getString(ChatColor.translateAlternateColorCodes('&', "blockbreaker-config.countdown-messages.countdown-5-seconds")));
+        BB_COUNTDOWN_3_SECONDS = new Message(main.getConfig().getString(ChatColor.translateAlternateColorCodes('&', "blockbreaker-config.countdown-messages.countdown-3-seconds")));
+        BB_COUNTDOWN_2_SECONDS = new Message(main.getConfig().getString(ChatColor.translateAlternateColorCodes('&', "blockbreaker-config.countdown-messages.countdown-2-seconds")));
+        BB_COUNTDOWN_1_SECONDS = new Message(main.getConfig().getString(ChatColor.translateAlternateColorCodes('&', "blockbreaker-config.countdown-messages.countdown-1-second")));
+
 
 
     }
+    public Message PLUGIN_PREFIX;
+    public Message NO_PERMISSION;
+    public Message BB_PREFIX;
+    public Message BB_COUNTDOWN_WAITING;
+    public Message BB_COUNTDOWN_10_SECONDS;
+    public Message BB_COUNTDOWN_5_SECONDS;
+    public Message BB_COUNTDOWN_3_SECONDS;
+    public Message BB_COUNTDOWN_2_SECONDS;
+    public Message BB_COUNTDOWN_1_SECONDS;
 }
 
 

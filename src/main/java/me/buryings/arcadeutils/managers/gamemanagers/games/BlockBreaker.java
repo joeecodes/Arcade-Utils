@@ -29,6 +29,7 @@ public class BlockBreaker {
             points.put(uuid, 0);
         }
     }
+
     // 1 Stone Block = 1 point
     public void addPoint(Player player) throws IOException {
         int point = points.get(player.getUniqueId()) + 1;

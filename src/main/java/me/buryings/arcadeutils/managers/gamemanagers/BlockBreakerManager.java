@@ -40,6 +40,7 @@ public class BlockBreakerManager {
         }
         return null;
     }
+
     public static BlockBreakerArenas getArenaId(int id) {
         for (BlockBreakerArenas arena : arenas) {
             if (arena.getID() == id) {
@@ -50,6 +51,7 @@ public class BlockBreakerManager {
     }
 
     public static boolean isRecruiting(int id) {
-        return getArenaId(id).getState() == BlockBreakerGameState.WAITING; }
+        return getArenaId(id).getState() == BlockBreakerGameState.WAITING;
+    }
 
-        }
+}

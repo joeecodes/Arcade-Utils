@@ -1,15 +1,11 @@
 package me.buryings.arcadeutils;
 
-import me.buryings.arcadeutils.commands.CommandArcade;
-import me.buryings.arcadeutils.commands.blockbreaker.CommandArena;
-import me.buryings.arcadeutils.commands.blockbreaker.CommandForceStart;
-import me.buryings.arcadeutils.commands.config.CommandReloadConfig;
 import me.buryings.arcadeutils.managers.CommandManager;
-import me.buryings.arcadeutils.managers.ConfigManager;
 import me.buryings.arcadeutils.managers.gamemanagers.BlockBreakerConfig;
 import me.buryings.arcadeutils.managers.gamemanagers.BlockBreakerManager;
-import me.buryings.arcadeutils.managers.gamemanagers.games.BlockBreakerCountdown;
-import org.bukkit.*;
+import org.bukkit.Bukkit;
+import org.bukkit.ChatColor;
+import org.bukkit.Material;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
@@ -32,7 +28,6 @@ public final class ArcadeUtils extends JavaPlugin {
     public void onEnable() {
 
         // config file load
-        new ConfigManager();
         new BlockBreakerConfig(this);
 
         // Game Managers
@@ -41,7 +36,6 @@ public final class ArcadeUtils extends JavaPlugin {
         // Instance
         ArcadeUtils.instance = this;
 
-        registerCommands();
         registerListeners();
         new CommandManager().register();
 
@@ -59,17 +53,7 @@ public final class ArcadeUtils extends JavaPlugin {
         Bukkit.getServer().getConsoleSender().sendMessage("Arcade has stopped!");
     }
 
-    public void registerCommands() {
 
-        // Plugin base commands
-        getCommand("arcade").setExecutor(new CommandArcade());
-        getCommand("menu").setExecutor(this);
-        getCommand("arcadereload").setExecutor(new CommandReloadConfig(this));
-
-        // BlockBreaker commands
-        getCommand("forcestart").setExecutor(new CommandForceStart());
-        getCommand("arena").setExecutor(new CommandArena());
-    }
     public void registerListeners() {
         // new ListenerManager().register();
     }
@@ -77,7 +61,7 @@ public final class ArcadeUtils extends JavaPlugin {
 
     // ARCADE MENU CREATION
     public void createMenu(Player player) {
-        Inventory menu = Bukkit.getServer().createInventory(null, 9, ChatColor.translateAlternateColorCodes('&',"&e&lARCADE MENU"));
+        Inventory menu = Bukkit.getServer().createInventory(null, 9, ChatColor.translateAlternateColorCodes('&', "&e&lARCADE MENU"));
 
         ItemStack item1 = new ItemStack(Material.BEACON);
         ItemMeta item1Meta = item1.getItemMeta();

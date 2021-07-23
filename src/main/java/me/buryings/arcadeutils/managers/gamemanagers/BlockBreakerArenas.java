@@ -1,5 +1,6 @@
 package me.buryings.arcadeutils.managers.gamemanagers;
 
+import lombok.Data;
 import me.buryings.arcadeutils.managers.gamemanagers.enums.BlockBreakerGameState;
 import me.buryings.arcadeutils.managers.gamemanagers.games.BlockBreaker;
 import me.buryings.arcadeutils.managers.gamemanagers.games.BlockBreakerCountdown;
@@ -9,9 +10,9 @@ import org.bukkit.entity.Player;
 
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.List;
 import java.util.UUID;
 
+@Data
 public class BlockBreakerArenas {
 
     private int id;
@@ -30,6 +31,7 @@ public class BlockBreakerArenas {
         game = new BlockBreaker(this);
 
     }
+
     public void addPlayer(Player player) throws IOException {
         players.add(player.getUniqueId());
         player.teleport(spawn);
@@ -44,7 +46,7 @@ public class BlockBreakerArenas {
         game.start();
     }
 
-    public void reset() throws IOException {
+    public void reset() {
         for (UUID uuid : players) {
             Bukkit.getPlayer(uuid).teleport(BlockBreakerConfig.getLobbySpawn());
         }
@@ -61,6 +63,7 @@ public class BlockBreakerArenas {
             Bukkit.getPlayer(uuid).sendMessage(message);
         }
     }
+
     public void removePlayer(Player player) throws IOException {
         players.remove(player.getUniqueId());
         player.teleport(BlockBreakerConfig.getLobbySpawn());
@@ -74,20 +77,5 @@ public class BlockBreakerArenas {
             reset();
         }
     }
-    public int getID() {
-        return id;
-    }
-    public List<UUID> getPlayers() {
-        return players;
-    }
-    public BlockBreakerGameState getState() {
 
-        return state;
-    }
-    public void setState(BlockBreakerGameState countdown) {
-        this.state = state;
-    }
-    public BlockBreaker BlockBreaker() {
-        return game;
-    }
 }

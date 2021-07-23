@@ -1,7 +1,6 @@
 package me.buryings.arcadeutils.managers.gamemanagers.games;
 
 import me.buryings.arcadeutils.ArcadeUtils;
-import me.buryings.arcadeutils.managers.ConfigManager;
 import me.buryings.arcadeutils.managers.gamemanagers.BlockBreakerArenas;
 import me.buryings.arcadeutils.managers.gamemanagers.BlockBreakerConfig;
 import me.buryings.arcadeutils.managers.gamemanagers.enums.BlockBreakerGameState;

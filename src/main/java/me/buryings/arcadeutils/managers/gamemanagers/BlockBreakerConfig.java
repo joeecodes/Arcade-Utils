@@ -40,6 +40,7 @@ public class BlockBreakerConfig {
                 main.getConfig().getInt("blockbreaker-config" + id + ".pitch"),
                 main.getConfig().getInt("blockbreaker-config" + id + ".yaw"));
     }
+
     public static int getArenaAmount() {
         return main.getConfig().getConfigurationSection("blockbreaker-config.arenas.").getKeys(false).size();
     }
