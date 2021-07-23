@@ -19,6 +19,7 @@ public class BlockBreakerCountdown extends BukkitRunnable implements Listener {
     public BlockBreakerCountdown(BlockBreakerArenas arenas) {
         this.arena = arena;
         this.seconds = BlockBreakerConfig.getCoundownSeconds();
+        this.main = ArcadeUtils.getInstance();
 
     }
 

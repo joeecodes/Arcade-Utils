@@ -5,6 +5,8 @@ import club.deltapvp.deltacore.api.commands.ISubCommand;
 import club.deltapvp.deltacore.api.commands.annotation.CommandInfo;
 import org.bukkit.command.CommandSender;
 
+import java.util.Arrays;
+
 //public class CommandArena implements CommandExecutor {
 //
 //    /*
@@ -70,12 +72,17 @@ import org.bukkit.command.CommandSender;
 @CommandInfo(name = "arena", playerOnly = true)
 public class CommandArena extends ICommand {
 
+    public CommandArena() {
+        addSubCommands(new Join());
+        setTabComplete((commandSender, strings) -> Arrays.asList("join", "leave"));
+    }
+
     @Override
     public void onCommand(CommandSender sender, String[] args) {
 
     }
 
-
+    @CommandInfo(name = "join", playerOnly = true)
     private class Join extends ISubCommand {
 
         @Override

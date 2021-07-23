@@ -4,5 +4,5 @@ public enum BlockBreakerGameState {
 
     WAITING,
     COUNTDOWN,
-    PLAYING;
+    PLAYING
 }

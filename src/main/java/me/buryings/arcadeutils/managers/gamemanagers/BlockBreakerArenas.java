@@ -32,13 +32,14 @@ public class BlockBreakerArenas {
 
     }
 
+    // TODO: add somewhere
     public void addPlayer(Player player) throws IOException {
         players.add(player.getUniqueId());
         player.teleport(spawn);
 
-        if (players.size() >= BlockBreakerConfig.getRequiredPlayers()) {
+        if (players.size() >= BlockBreakerConfig.getRequiredPlayers())
             countdown.begin();
-        }
+
 
     }
 
@@ -69,13 +70,11 @@ public class BlockBreakerArenas {
         player.teleport(BlockBreakerConfig.getLobbySpawn());
 
         if (players.size() <= BlockBreakerConfig.getRequiredPlayers()) {
-            if (state.equals(BlockBreakerGameState.COUNTDOWN)) {
+            if (state.equals(BlockBreakerGameState.COUNTDOWN))
                 reset();
-            }
         }
-        if (players.size() == 0 && state.equals(BlockBreakerGameState.PLAYING)) {
+        if (players.size() == 0 && state.equals(BlockBreakerGameState.PLAYING))
             reset();
-        }
     }
 
 }

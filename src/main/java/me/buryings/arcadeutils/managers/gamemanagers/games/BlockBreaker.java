@@ -19,6 +19,7 @@ public class BlockBreaker {
     public BlockBreaker(BlockBreakerArenas arena) {
         this.arena = arena;
         this.points = new HashMap<>();
+        this.main = ArcadeUtils.getInstance();
     }
 
     public void start() {
@@ -31,7 +32,7 @@ public class BlockBreaker {
     }
 
     // 1 Stone Block = 1 point
-    public void addPoint(Player player) throws IOException {
+    public void addPoint(Player player) {
         int point = points.get(player.getUniqueId()) + 1;
         if (point == 500) {
             arena.sendMessage(ChatColor.translateAlternateColorCodes('&', main.getConfig().getString("blockbreaker-config.winning-player-message")

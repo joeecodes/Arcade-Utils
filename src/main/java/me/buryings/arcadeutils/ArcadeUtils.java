@@ -34,7 +34,7 @@ public final class ArcadeUtils extends JavaPlugin {
         new BlockBreakerManager();
 
         // Instance
-        ArcadeUtils.instance = this;
+        instance = this;
 
         registerListeners();
         new CommandManager().register();

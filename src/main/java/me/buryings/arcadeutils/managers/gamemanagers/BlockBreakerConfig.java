@@ -28,8 +28,8 @@ public class BlockBreakerConfig {
                 main.getConfig().getDouble("blockbreaker-config.lobby-spawn.x"),
                 main.getConfig().getDouble("blockbreaker-config.lobby-spawn.y"),
                 main.getConfig().getDouble("blockbreaker-config.lobby-spawn.z"),
-                main.getConfig().getInt("pitch"),
-                main.getConfig().getInt("yaw"));
+                (float) main.getConfig().getDouble("pitch"),
+                (float) main.getConfig().getDouble("yaw"));
     }
 
     public static Location getArenaSpawn(int id) {

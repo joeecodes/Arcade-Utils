@@ -22,32 +22,20 @@ public class BlockBreakerManager {
         return arenas;
     }
 
-    public static boolean isPlaying(Player player) {
-        for (BlockBreakerArenas arena : arenas) {
-            if (arena.getPlayers().contains(player.getUniqueId())) {
 
-                return true;
-            }
-        }
-        return false;
+    public static boolean isPlaying(Player player) {
+        BlockBreakerArenas e = arenas.stream().filter(blockBreakerArenas -> blockBreakerArenas.getPlayers().contains(player.getUniqueId())).findFirst().orElse(null);
+        return e != null;
     }
 
     public static BlockBreakerArenas getArena(Player player) {
-        for (BlockBreakerArenas arena : arenas) {
-            if (arena.getPlayers().contains(player.getUniqueId())) {
-                return arena;
-            }
-        }
-        return null;
+        BlockBreakerArenas e = arenas.stream().filter(blockBreakerArenas -> blockBreakerArenas.getPlayers().contains(player.getUniqueId())).findFirst().orElse(null);
+        return e;
     }
 
     public static BlockBreakerArenas getArenaId(int id) {
-        for (BlockBreakerArenas arena : arenas) {
-            if (arena.getID() == id) {
-                return arena;
-            }
-        }
-        return null;
+        BlockBreakerArenas e = arenas.stream().filter(blockBreakerArenas -> blockBreakerArenas.getId() == id).findFirst().orElse(null);
+        return e;
     }
 
     public static boolean isRecruiting(int id) {
