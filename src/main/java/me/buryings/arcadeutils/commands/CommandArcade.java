@@ -3,11 +3,7 @@ package me.buryings.arcadeutils.commands;
 import club.deltapvp.deltacore.api.commands.ICommand;
 import club.deltapvp.deltacore.api.commands.annotation.CommandInfo;
 import club.deltapvp.deltacore.api.utilities.Message;
-import org.bukkit.ChatColor;
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
 
 //public class CommandArcade implements CommandExecutor {
 //
@@ -26,7 +22,7 @@ import org.bukkit.entity.Player;
 //    }
 //}
 @CommandInfo(name = "arcade", permission = "arcadeutils.arcade", playerOnly = true)
-public class CommandArcade extends ICommand{
+public class CommandArcade extends ICommand {
 
     @Override
     public void onCommand(CommandSender sender, String[] args) {

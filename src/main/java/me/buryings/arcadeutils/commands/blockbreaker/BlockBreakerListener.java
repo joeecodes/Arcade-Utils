@@ -2,7 +2,6 @@ package me.buryings.arcadeutils.commands.blockbreaker;
 
 import me.buryings.arcadeutils.managers.gamemanagers.BlockBreakerManager;
 import me.buryings.arcadeutils.managers.gamemanagers.enums.BlockBreakerGameState;
-import org.bukkit.ChatColor;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

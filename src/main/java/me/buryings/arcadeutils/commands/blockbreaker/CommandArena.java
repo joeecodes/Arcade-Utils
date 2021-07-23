@@ -3,17 +3,7 @@ package me.buryings.arcadeutils.commands.blockbreaker;
 import club.deltapvp.deltacore.api.commands.ICommand;
 import club.deltapvp.deltacore.api.commands.ISubCommand;
 import club.deltapvp.deltacore.api.commands.annotation.CommandInfo;
-import me.buryings.arcadeutils.ArcadeUtils;
-import me.buryings.arcadeutils.managers.gamemanagers.BlockBreakerArenas;
-import me.buryings.arcadeutils.managers.gamemanagers.BlockBreakerConfig;
-import me.buryings.arcadeutils.managers.gamemanagers.BlockBreakerManager;
-import org.bukkit.ChatColor;
-import org.bukkit.command.Command;
-import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
-import org.bukkit.entity.Player;
-
-import java.io.IOException;
 
 //public class CommandArena implements CommandExecutor {
 //
@@ -78,7 +68,7 @@ import java.io.IOException;
 //        }
 //*/
 @CommandInfo(name = "arena", playerOnly = true)
-public class CommandArena extends ICommand{
+public class CommandArena extends ICommand {
 
     @Override
     public void onCommand(CommandSender sender, String[] args) {
@@ -86,7 +76,7 @@ public class CommandArena extends ICommand{
     }
 
 
-    private class Join extends ISubCommand{
+    private class Join extends ISubCommand {
 
         @Override
         public void runCommand(CommandSender sender, String[] args) {

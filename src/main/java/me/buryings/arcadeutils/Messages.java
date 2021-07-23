@@ -5,10 +5,18 @@ import lombok.experimental.UtilityClass;
 import org.bukkit.ChatColor;
 
 @UtilityClass
-public class Messages  {
+public class Messages {
 
+    public Message PLUGIN_PREFIX;
+    public Message NO_PERMISSION;
+    public Message BB_PREFIX;
+    public Message BB_COUNTDOWN_WAITING;
+    public Message BB_COUNTDOWN_10_SECONDS;
+    public Message BB_COUNTDOWN_5_SECONDS;
+    public Message BB_COUNTDOWN_3_SECONDS;
+    public Message BB_COUNTDOWN_2_SECONDS;
+    public Message BB_COUNTDOWN_1_SECONDS;
     private static ArcadeUtils main;
-
     public Messages(ArcadeUtils main) {
         Messages.main = main;
 
@@ -25,17 +33,7 @@ public class Messages  {
         BB_COUNTDOWN_1_SECONDS = new Message(main.getConfig().getString(ChatColor.translateAlternateColorCodes('&', "blockbreaker-config.countdown-messages.countdown-1-second")));
 
 
-
     }
-    public Message PLUGIN_PREFIX;
-    public Message NO_PERMISSION;
-    public Message BB_PREFIX;
-    public Message BB_COUNTDOWN_WAITING;
-    public Message BB_COUNTDOWN_10_SECONDS;
-    public Message BB_COUNTDOWN_5_SECONDS;
-    public Message BB_COUNTDOWN_3_SECONDS;
-    public Message BB_COUNTDOWN_2_SECONDS;
-    public Message BB_COUNTDOWN_1_SECONDS;
 }
 
 
